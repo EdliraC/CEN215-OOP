@@ -1,0 +1,16 @@
+public class emailGeneration {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//enter name of student
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter name of student:");
+		String name=input.next();
+		System.out.println("Enter surname of student:");
+		String surname=input.next();
+		System.out.println("Enter year of student:");
+		int year=input.nextInt();
+		
+		System.out.print(String.format("%s%s%s@epoka.edu.al", name.substring(0, 1), surname, String.valueOf(year).substring(2,4)));
+	
+	}
