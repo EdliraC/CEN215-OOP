@@ -1,0 +1,16 @@
+import java.util.Date;
+public class TestPerson {
+	
+	public static void main(String [] args)
+	{
+		Person [] persons= {new Person("Edlira", "Ed", "068686868", "edlira@email.com"),
+							new Student("Edlira", "Ed", "068686868", "edlira@email.com", Status.FRESHMAN),
+							new Employee("Edlira", "Ed", "068686868", "edlira@email.com", "E-302", 12000, new Date()),
+							new Staff("Edlira", "Ed", "068686868", "edlira@email.com", "E-302", 12000, new Date(), "Manager"),
+							new Faculty("Edlira", "Ed", "068686868", "edlira@email.com", "E-302", 12000, new Date(), 3,2),
+							};
+		for(Person person: persons)
+			System.out.println(person);
+	}
+
+}
