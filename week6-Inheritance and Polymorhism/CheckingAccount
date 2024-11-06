@@ -2,13 +2,13 @@ public class CheckingAccount extends Account{
 
     private double overdraft;
 
-    public CheckingAccount(String id, String name, double balance, double overdraft) {
-        super(id, name, balance);
+    public CheckingAccount(int id,  double balance, double overdraft) {
+        super(id,  balance);
         this.overdraft = overdraft;
     }
 
-    public CheckingAccount(String id, String name, double overdraft) {
-        super(id, name);
+    public CheckingAccount(int id,  double overdraft) {
+        super(id, 0);
         this.overdraft = overdraft;
     }
 
