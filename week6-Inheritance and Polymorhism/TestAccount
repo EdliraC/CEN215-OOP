@@ -1,0 +1,17 @@
+
+
+public class TestAccount {
+	
+	public static void main(String [] args)
+	{
+		Account accounts[] = {
+				new Account(1,100),
+				new SavingsAccount(2, 200),
+				new CheckingAccount(3, 400,100)
+		};
+	
+	for(Account account: accounts)
+		System.out.println(account);
+	}
+
+}
