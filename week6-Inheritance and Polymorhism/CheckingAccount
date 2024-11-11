@@ -4,7 +4,7 @@ public class CheckingAccount extends Account{
 
     public CheckingAccount(int id,  double balance, double overdraft) {
         super(id,  balance);
-        this.overdraft = overdraft;
+        setOverdraft(overdraft);
     }
 
     public CheckingAccount(int id,  double overdraft) {
