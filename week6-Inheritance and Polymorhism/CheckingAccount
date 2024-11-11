@@ -17,12 +17,12 @@ public class CheckingAccount extends Account{
     }
 
     public void setOverdraft(double overdraft) {
-        this.overdraft = overdraft > 0 ? overdraft : this.overdraft;
+        this.overdraft = overdraft < 0 ? overdraft : this.overdraft;
     }
 
 @Override    
 public boolean withdraw(double amount) {
-        if(getBalance() - amount >= overdraft)
+        if(getBalance() - amount >= overdraft && amount >0)
             {
         setBalance(getBalance()-amount);
         return true;
