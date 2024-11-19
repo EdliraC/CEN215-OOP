@@ -1,0 +1,46 @@
+public class Triangle extends GeometricObject {
+	
+	private boolean isFilled;
+	private int side1, side2,side3;
+
+	public Triangle(String color, int side1, int side2, int side3, boolean isFilled)
+	{
+		super(color);
+		if(Triangle.areSidesOfTriangle(side1, side2, side3))
+		{	this.side1=side1;
+			this.side2=side2;
+			this.side3=side3;
+		}
+		else
+			this.side1=this.side2=this.side3=0;
+		
+		this.isFilled=isFilled;
+	}
+	
+	private static boolean areSidesOfTriangle(int a, int b, int c )
+	{
+		if(a+b>c)
+		{ 
+			if(a+c>b)
+			{
+				if(b+c>a)
+					return true;
+			}
+		}
+		return false;
+	}
+	public boolean isFilled(){return isFilled;}
+	
+	
+	
+	@Override
+	public double getArea() {
+		return Math.sqrt(this.getPerimeter()*(this.getPerimeter()-side1)*(this.getPerimeter()-side2)*(this.getPerimeter()-side3));
+	}
+
+	@Override
+	public double getPerimeter() {
+		return side1+side2+side3;
+	}
+
+}
