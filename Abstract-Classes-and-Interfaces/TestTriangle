@@ -1,0 +1,11 @@
+public class testTriangle {
+	public static void main(String [] args)
+	{
+		Triangle trekendesh1=new Triangle("blue", 1, 2, 3, true);
+	System.out.println(trekendesh1.getArea());
+	System.out.println(trekendesh1.getPerimeter());
+	System.out.println(trekendesh1.getColor());
+	System.out.println(trekendesh1.isFilled());
+	}
+
+}
