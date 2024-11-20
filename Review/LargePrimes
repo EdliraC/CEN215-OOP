@@ -1,0 +1,22 @@
+import java.math.BigInteger;
+
+public class LargePrimes {
+	public static void main(String [] args)
+	{
+		BigInteger []primes=new BigInteger[5];
+		
+		BigInteger current=BigInteger.valueOf(Long.MAX_VALUE).add(BigInteger.ONE);
+		
+		int i=0;
+		while(i<primes.length)
+		{
+			if(current.isProbablePrime(50))
+				primes[i++]=current;
+			current=current.add(BigInteger.ONE);
+		}
+		
+		for(BigInteger prime: primes)
+			System.out.println(prime);
+	}
+
+}
