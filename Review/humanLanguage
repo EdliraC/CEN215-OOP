@@ -1,0 +1,20 @@
+public class HumanLanguage extends Language
+{
+    private MorphologicalType mtype;
+public HumanLanguage(String name, UsageField usageField, MorphologicalType mtype)
+{
+    super(name, usageField);
+    this.mtype=mtype;
+}
+@Override 
+public String toString()
+{
+    return "Human Languagage  Name " + getName();
+}
+
+}
+
+enum MorphologicalType{
+
+    Agglutinative, Fusional, Analytical, Polysynthetic
+}
