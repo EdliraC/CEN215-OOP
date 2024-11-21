@@ -1,0 +1,33 @@
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class removeDuplicate{
+    public static void main(String[] args) {
+        System.out.print("Enter ten integers:");
+        ArrayList<Integer> list =new ArrayList<>();
+        Scanner input=new Scanner(System.in);
+        for(int i=0; i<10; i++)
+        {
+            list.add(input.nextInt());
+        }
+        
+        removeDuplicate(list);
+    }
+
+    public static void removeDuplicate(ArrayList<Integer> list)
+    {
+        ArrayList<Integer> listUnique=new ArrayList<>();
+        for(Integer integer: list)
+        {
+            if(!listUnique.contains(integer))
+             listUnique.add(integer);
+        }
+
+        System.out.print("The distinct integers are: ");
+        for(Integer integer: listUnique)
+            System.out.print(integer+ " ");
+
+
+    }
+}
