@@ -1,0 +1,25 @@
+
+
+public class Language
+{
+    private String name;
+    private UsageField usageField;
+
+    public Language(String name, UsageField usageField)
+
+    {
+        this.name=name;
+        this.usageField=usageField;     
+
+
+    
+    }
+
+    public String getName(){return name;}
+
+public String toString()
+{
+    return this.getClass().getName()+ " Name " + getName();
+}
+
+}
