@@ -1,0 +1,17 @@
+public class UsageField{
+    private long popularity;
+    private int yearCreation;
+    private double growthPercentage;
+
+    public UsageField(long popularity, int yearCreation, double growthPercentage)
+    {
+        this.popularity=popularity;
+        this.yearCreation=yearCreation;
+        this.growthPercentage=growthPercentage;
+    }
+    @Override
+    public String toString()
+    {
+        return popularity + " " +yearCreation + " " + growthPercentage+ "%";
+    }
+}
