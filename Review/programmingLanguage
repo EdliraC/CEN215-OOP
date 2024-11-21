@@ -1,0 +1,19 @@
+public class ProgrammingLanguage extends Language
+{
+    private String creator;
+    private String Platforms;
+    private final String status="IN_USE";
+
+    public ProgrammingLanguage(String name, UsageField usageField, String creator, String Platforms)
+    {
+        super(name, usageField);
+        this.creator=creator;
+        this.Platforms=Platforms;
+    }
+
+    @Override 
+    public String toString()
+    {
+        return "ProgrammingLanguage" + " name "+ this.getName();
+    }
+}
