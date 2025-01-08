@@ -1,0 +1,6 @@
+package week12;
+
+
+public enum Genre {
+    MYSTERY, ACTION, HISTORICAL, DYSTOPIAN, FANTASY
+}
